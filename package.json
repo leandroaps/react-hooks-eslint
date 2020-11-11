@@ -27,15 +27,15 @@
       "react-app/jest"
     ]
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "npm run format",
+      "npm run lint:fix"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-      "src/**/*.{js,jsx,json}": [
-        "npm run format",
-        "npm run lint:fix"
-      ]
     }
   },
   "browserslist": {
